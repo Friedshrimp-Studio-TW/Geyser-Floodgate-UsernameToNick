@@ -20,13 +20,20 @@ public class OnPlayerJoin implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         FileConfiguration configuration = plugin.getConfig();
         if (configuration.getBoolean("Config.Always")){
-            if (FloodgateApi.getInstance().isFloodgatePlayer(event.getPlayer().getUniqueId())  && !configuration.getStringList("Config.Bypass-Player").contains(event.getPlayer().getName())) event.getPlayer().setDisplayName(String.format(Objects.requireNonNull(configuration.getString("Config.Nickname")), FloodgateApi.getInstance().getPlayer(event.getPlayer().getUniqueId()).getUsername()));
-            if (!event.getPlayer().getScoreboardTags().contains("Bedrock")) event.getPlayer().addScoreboardTag("Bedrock");
-        } else if (!event.getPlayer().getScoreboardTags().contains("Bedrock"))
-            if (FloodgateApi.getInstance().isFloodgatePlayer(event.getPlayer().getUniqueId()) && !configuration.getStringList("Config.Bypass-Player").contains(event.getPlayer().getName()))
-                if (!event.getPlayer().getScoreboardTags().contains("Bedrock")) {
-                    event.getPlayer().setDisplayName(String.format(Objects.requireNonNull(configuration.getString("Config.Nickname")), FloodgateApi.getInstance().getPlayer(event.getPlayer().getUniqueId()).getUsername()));
-                    event.getPlayer().addScoreboardTag("Bedrock");
+            Bukkit.getScheduler().runTaskLater(plugin, () -> {
+                if (FloodgateApi.getInstance().isFloodgatePlayer(event.getPlayer().getUniqueId())  && !configuration.getStringList("Config.Bypass-Player").contains(event.getPlayer().getName())) event.getPlayer().setDisplayName(String.format(Objects.requireNonNull(configuration.getString("Config.Nickname")), FloodgateApi.getInstance().getPlayer(event.getPlayer().getUniqueId()).getUsername()));
+                if (!event.getPlayer().getScoreboardTags().contains("Bedrock")) event.getPlayer().addScoreboardTag("Bedrock");
+            }, 20);
+        } else {
+            if (!event.getPlayer().getScoreboardTags().contains("Bedrock"))
+                if (FloodgateApi.getInstance().isFloodgatePlayer(event.getPlayer().getUniqueId()) && !configuration.getStringList("Config.Bypass-Player").contains(event.getPlayer().getName())) {
+                    Bukkit.getScheduler().runTaskLater(plugin, () -> {
+                        if (!event.getPlayer().getScoreboardTags().contains("Bedrock")) {
+                            event.getPlayer().setDisplayName(String.format(Objects.requireNonNull(configuration.getString("Config.Nickname")), FloodgateApi.getInstance().getPlayer(event.getPlayer().getUniqueId()).getUsername()));
+                            event.getPlayer().addScoreboardTag("Bedrock");
+                        }
+                    }, 20);
                 }
+        }
     }
 }
