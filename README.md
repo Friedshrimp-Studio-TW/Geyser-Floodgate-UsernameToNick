@@ -25,3 +25,8 @@ The longest username for BE players is 15 characters.
 ```
 WIP
 ```
+
+## bStats
+
+[![bStats Graph](https://bstats.org/signatures/bukkit/Geyser-Floodgate-UsernameToNick.svg)](https://bstats.org/plugin/bukkit/Geyser-Floodgate-UsernameToNick)
+
