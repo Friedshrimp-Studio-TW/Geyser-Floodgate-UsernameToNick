@@ -1,4 +1,4 @@
-<h1 align="center">Geyser-Floodgate-UsernameToNick<br>Geyser-Floodgate-用戶名轉暱稱</h1>
+<h1 align="center">Geyser-Floodgate-用戶名轉暱稱<br>Geyser-Floodgate-UsernameToNick</h1>
 
 ## 📜插件描述 | Plugin Description📜
 > 將Geyser-Floodgate的用戶前綴由用戶名改為暱稱!<br>一切的配置都在配置檔案中!<br><br>由於Geyser-Floodgate的用戶前綴是更改玩家名稱<br>且限制前綴加名稱最多16字符，過長的會被截斷<br>為了解決這個問題，故衍生出這個插件!
@@ -13,6 +13,11 @@
 3. 更改配置檔案<br>Edit config file.
 
 4. 享受!<br>Enjoy!
+
+建議將Floodgate配置的前綴選項設定為.
+因BE玩家最長用戶名為15字元
+It is recommended to set the prefix option of the Floodgate configuration to .
+The longest username for BE players is 15 characters.
 
 ## 📜開發 | Develop📜
 ```
