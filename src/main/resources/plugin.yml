@@ -1,6 +1,6 @@
 name: Geyser-UsernameToNick
 version: '${project.version}'
-main: com.vincentx0905.geyserusernametonick.GeyserFloodgate_UsernameToNick
+main: com.vincentx0905.geyserfloodgateusernametonick.GeyserFloodgate_UsernameToNick
 api-version: '1.20'
 description: Geyser-Floodgate用戶名轉暱稱插件
 author: VincentX0905(炸蝦)
