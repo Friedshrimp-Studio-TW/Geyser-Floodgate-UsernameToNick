@@ -40,7 +40,7 @@ jobs:
     - name: 構建插件檔案
       uses: actions/upload-artifact@v3
       with:
-        name: Skill-Spigot
+        name: GeyserFloodgate-UsernameToNick
         path: target/GeyserFloodgate-UsernameToNick-*.jar
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
