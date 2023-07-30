@@ -19,8 +19,9 @@ public final class GeyserFloodgate_UsernameToNick extends JavaPlugin implements 
     public void onEnable() {
         PluginManager pluginManager = getServer().getPluginManager();
         Plugin geyserfloodgateplugin = pluginManager.getPlugin("floodgate");
-        if (geyserfloodgateplugin != null) {
-            if (geyserfloodgateplugin.isEnabled()) {
+        Plugin essentialsxplugin = pluginManager.getPlugin("EssentialsX");
+        if (geyserfloodgateplugin != null && essentialsxplugin != null) {
+            if (geyserfloodgateplugin.isEnabled() && essentialsxplugin.isEnabled()) {
                 getLogger().info("Found Geyser-floodgate plugin, Enable plugin!");
                 pluginManager.registerEvents(this, this);
                 getDataFolder().mkdirs();
@@ -40,7 +41,7 @@ public final class GeyserFloodgate_UsernameToNick extends JavaPlugin implements 
                 getLogger().info("Geyser-UsernameToNick plugin now Enable!" + " By:VincentX0905(炸蝦)");
             }
         } else {
-            getLogger().warning("Not Found Geyser-floodgate plugin, Disable plugin!");
+            getLogger().warning("Not Found Geyser-floodgate or EssentialsX plugin, Disable plugin!");
             Bukkit.getPluginManager().disablePlugin(this);
         }
 
