@@ -25,7 +25,7 @@ public class OnPlayerJoin implements Listener {
                 if (!event.getPlayer().getScoreboardTags().contains("Bedrock")) event.getPlayer().addScoreboardTag("Bedrock");
             }, 20);
         } else {
-            if (!event.getPlayer().getScoreboardTags().contains("Bedrock"))
+            if (!event.getPlayer().getScoreboardTags().contains("Bedrock")) {
                 if (FloodgateApi.getInstance().isFloodgatePlayer(event.getPlayer().getUniqueId()) && !configuration.getStringList("Config.Bypass-Player").contains(event.getPlayer().getName())) {
                     Bukkit.getScheduler().runTaskLater(plugin, () -> {
                         if (!event.getPlayer().getScoreboardTags().contains("Bedrock")) {
@@ -34,6 +34,7 @@ public class OnPlayerJoin implements Listener {
                         }
                     }, 20);
                 }
+            }
         }
     }
 }
