@@ -19,7 +19,7 @@ public final class GeyserFloodgate_UsernameToNick extends JavaPlugin implements 
     public void onEnable() {
         PluginManager pluginManager = getServer().getPluginManager();
         Plugin geyserfloodgateplugin = pluginManager.getPlugin("floodgate");
-        Plugin essentialsxplugin = pluginManager.getPlugin("EssentialsX");
+        Plugin essentialsxplugin = pluginManager.getPlugin("Essentials");
         if (geyserfloodgateplugin != null && essentialsxplugin != null) {
             if (geyserfloodgateplugin.isEnabled() && essentialsxplugin.isEnabled()) {
                 getLogger().info("Found Geyser-floodgate and EssentialsX plugin, Enable plugin!");
