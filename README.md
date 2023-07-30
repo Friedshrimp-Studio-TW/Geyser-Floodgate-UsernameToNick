@@ -1,5 +1,7 @@
 <h1 align="center">Geyser-Floodgate-用戶名轉暱稱<br>Geyser-Floodgate-UsernameToNick</h1>
 
+## ⚠️目前支援Minecraft版本: 1.20.1<br>⚠️Currently supported Minecraft version: 1.20.1
+
 ## 📜插件描述 | Plugin Description📜
 > 將Geyser-Floodgate的用戶前綴由用戶名改為暱稱!<br>一切的配置都在配置檔案中!<br><br>由於Geyser-Floodgate的用戶前綴是更改玩家名稱<br>且限制前綴加名稱最多16字符，過長的會被截斷<br>為了解決這個問題，故衍生出這個插件!
 ---
