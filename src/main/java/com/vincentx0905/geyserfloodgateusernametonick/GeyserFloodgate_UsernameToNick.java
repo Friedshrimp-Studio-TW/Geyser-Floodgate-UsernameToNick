@@ -1,5 +1,6 @@
 package com.vincentx0905.geyserfloodgateusernametonick;
 
+import org.bstats.bukkit.Metrics;
 import com.vincentx0905.geyserfloodgateusernametonick.event.OnPlayerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -35,6 +36,7 @@ public final class GeyserFloodgate_UsernameToNick extends JavaPlugin implements 
                 }
                 OnPlayerJoin onPlayerJoin = new OnPlayerJoin(this);
                 getServer().getPluginManager().registerEvents(onPlayerJoin, this);
+                Metrics metrics = new Metrics(this, 19304);
                 getLogger().info("Geyser-UsernameToNick plugin now Enable!" + " By:VincentX0905(炸蝦)");
             }
         } else {
