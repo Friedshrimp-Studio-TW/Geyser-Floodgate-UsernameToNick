@@ -35,7 +35,7 @@ jobs:
       run: mvn -B package --file pom.xml
       
     - name: Maven 依賴相關
-      uses: advanced-security/maven-dependency-submission-action@v3.0.2
+      uses: advanced-security/maven-dependency-submission-action@v3.0.3
       
     - name: 構建插件檔案
       uses: actions/upload-artifact@v3
