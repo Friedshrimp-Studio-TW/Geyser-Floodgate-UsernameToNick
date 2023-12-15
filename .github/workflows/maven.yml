@@ -38,7 +38,7 @@ jobs:
       uses: advanced-security/maven-dependency-submission-action@v3.0.2
       
     - name: 構建插件檔案
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: GeyserFloodgate-UsernameToNick
         path: target/GeyserFloodgate-UsernameToNick-*.jar
